@@ -12,8 +12,6 @@
 
 int main(int argc, char **argv)
 {
-  uint16_t i = 0;
-
   struct display *d;
 
   /* initialisation */
@@ -26,7 +24,7 @@ int main(int argc, char **argv)
     /* parent */
     for (;;) {
       delay(1000);
-      set_display_str(d, "23.15");
+      set_display_str(d, (char *)"23.15");
 
       d->cascaded->digit[0] = DIGIT_1 | DISP_8 | DISP_DP;
       d->cascaded->digit[1] = DIGIT_2 | DISP_E | DISP_DP;
